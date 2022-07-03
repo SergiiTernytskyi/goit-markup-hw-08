@@ -1,0 +1,67 @@
+.license-form {
+  width: 100%;
+
+  @include respond-to('desktop') {
+    padding-left: 12px;
+  }
+}
+
+.license-form__label {
+  display: flex;
+  align-items: flex-start;
+
+  @include font-style(null, 14px, 0.03em, 1.7);
+  cursor: pointer;
+
+  @include respond-to('tablet') {
+    align-items: center;
+  }
+}
+
+.license-form__checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 7px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid getColor('secondary');
+  border-radius: 2px;
+  background-color: getColor('primary');
+
+  @include transition-function(transition, border-color);
+}
+
+.license-form__icon {
+  visibility: hidden;
+  fill: getColor('primary');
+  opacity: 0;
+  @include transition-function(visibility, opacity);
+}
+
+.license-form__input:checked + .license-form__label > .license-form__checkbox {
+  border-color: transparent;
+  background-color: getColor('accent');
+}
+
+.license-form__input:checked + .license-form__label > .license-form__checkbox .license-form__icon {
+  visibility: visible;
+  opacity: 1;
+}
+
+.license-form__input:focus + .license-form__label > .license-form__checkbox {
+  border-color: getColor('accent');
+}
+
+.license-form__text {
+  @include font-style(nill, 12px, 0.03em, 1.17);
+
+  &--agreement {
+    color: getColor('accent');
+  }
+
+  @include respond-to('desktop') {
+    @include font-style(nill, 14px, null, 1.7);
+  }
+}

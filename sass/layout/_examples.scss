@@ -1,0 +1,20 @@
+.examples {
+  @include respond-to('tablet') {
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc(#{$gap-size} / (-2));
+  }
+}
+
+.examples__item {
+  margin-bottom: $gap-size;
+
+  @include respond-to('tablet') {
+    flex-basis: calc((100% - (2 * #{$gap-size})) / 2);
+    margin: calc(#{$gap-size} / 2);
+  }
+
+  @include respond-to('desktop') {
+    flex-basis: calc((100% - (3 * #{$gap-size})) / 3);
+  }
+}

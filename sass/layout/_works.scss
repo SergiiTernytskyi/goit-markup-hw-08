@@ -1,0 +1,7 @@
+.works__buttons {
+  margin-bottom: 40px;
+
+  @include respond-to('desktop') {
+    margin-bottom: 50px;
+  }
+}

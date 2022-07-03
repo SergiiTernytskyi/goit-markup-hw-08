@@ -1,0 +1,47 @@
+.modal-window {
+  padding: 40px;
+
+  width: 100%;
+  min-height: 609px;
+  max-width: 450px;
+
+  background-color: getColor('primary');
+  box-shadow: 0px 1px 3px rgba(getColor('dark'), 0.12), 0px 1px 1px rgba(getColor('dark'), 0.14),
+    0px 2px 1px rgba(getColor('dark'), 0.2);
+  border-radius: 4px;
+  opacity: 1;
+
+  @include transition-function(transform, opacity);
+
+  .backdrop.is-hidden & {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  @include respond-to('desktop') {
+    min-height: 581px;
+    min-width: 528px;
+  }
+}
+
+.modal-window__title {
+  margin-bottom: 12px;
+
+  @include font-style(700, 20px, 0.03em, 1.5);
+  text-align: center;
+  color: getColor('secondary');
+
+  @include respond-to('desktop') {
+    @include font-style(null, null, null, 1.15);
+  }
+}
+
+.modal-window__close-button {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
+
+.modal-window__button {
+  text-align: center;
+}

@@ -1,0 +1,61 @@
+.page-header {
+  height: 60px;
+  border-bottom: 1px solid getColor('header-border');
+
+  @include respond-to('tablet') {
+    height: 80px;
+  }
+}
+
+.page-header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-header__logo {
+  @include respond-to('tablet') {
+    margin-right: 88px;
+  }
+
+  @include respond-to('desktop') {
+    margin-right: 93px;
+  }
+}
+
+.page-header__contacts {
+  display: none;
+
+  @include respond-to('tablet') {
+    display: block;
+    margin-left: auto;
+  }
+
+  @include respond-to('desktop') {
+    display: flex;
+  }
+}
+
+.page-header__menu-btn {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @include respond-to('tablet') {
+    display: none;
+  }
+}
+
+.page-header__icon {
+  display: block;
+  fill: currentColor;
+
+  @include transition-function(color);
+
+  .page-header__menu-btn:hover &,
+  .page-header__menu-btn:focus & {
+    color: getColor('accent');
+  }
+}

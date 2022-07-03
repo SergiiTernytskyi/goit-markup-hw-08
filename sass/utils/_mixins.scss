@@ -1,0 +1,28 @@
+// Font style defining
+@mixin font-style($font-weight, $font-size, $letter-spacing, $line-height) {
+  font-weight: $font-weight;
+  font-size: $font-size;
+  letter-spacing: $letter-spacing;
+  line-height: $line-height;
+}
+
+// Transition property
+@mixin transition-function($properties...) {
+  $function: ();
+  @each $property in $properties {
+    $function: ($function, transitions($property));
+  }
+  transition: $function;
+}
+
+@function transitions($property) {
+  $transition-default: ($property $duration $timing-function);
+  @return $transition-default;
+}
+
+// Adaptivity media rules
+@mixin respond-to($breakpoint) {
+  @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}

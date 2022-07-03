@@ -1,0 +1,9 @@
+.title {
+  @include font-style(700, 28px, 0.03em, 1.18);
+  text-align: center;
+  color: getColor('secondary');
+
+  @include respond-to('desktop') {
+    @include font-style(null, 36px, null, 1.17);
+  }
+}

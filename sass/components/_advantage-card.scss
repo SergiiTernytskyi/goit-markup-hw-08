@@ -1,0 +1,35 @@
+.advantage-card {
+  width: 100%;
+}
+
+.advantage-card__thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+
+  height: 120px;
+  background-color: getColor('secondary-background');
+}
+
+.advantage-card__icon {
+  width: 70px;
+  height: 70px;
+}
+
+.advantage-card__name {
+  margin-bottom: 10px;
+
+  @include font-style(700, 14px, 0.03em, 1.14);
+  text-align: center;
+  text-transform: uppercase;
+  color: getColor('secondary');
+
+  @include respond-to('tablet') {
+    text-align: left;
+  }
+}
+
+.advantage-card__text {
+  @include font-style(null, 14px, 0.03em, 1.71);
+}

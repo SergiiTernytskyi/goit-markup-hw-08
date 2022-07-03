@@ -1,0 +1,9 @@
+.section {
+  padding-top: map-get($section-paddings, 'padding-mob');
+  padding-bottom: map-get($section-paddings, 'padding-mob');
+
+  @include respond-to('desktop') {
+    padding-top: map-get($section-paddings, 'padding-desk');
+    padding-bottom: map-get($section-paddings, 'padding-desk');
+  }
+}

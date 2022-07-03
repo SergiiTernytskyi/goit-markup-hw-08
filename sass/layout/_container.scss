@@ -1,0 +1,18 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include respond-to('mobile') {
+    width: map-get($breakpoints, 'mobile');
+  }
+
+  @include respond-to('tablet') {
+    width: map-get($breakpoints, 'tablet');
+  }
+
+  @include respond-to('desktop') {
+    width: map-get($breakpoints, 'desktop');
+  }
+}

@@ -1,0 +1,28 @@
+.adress__item {
+  @include font-style(null, 14px, 0.03em, 1.71);
+  color: getColor('primary');
+}
+
+.adress__item:not(:last-child) {
+  margin-bottom: 8px;
+
+  @include respond-to('desktop') {
+    margin-bottom: 9px;
+  }
+}
+
+.adress__link {
+  color: inherit;
+  font-style: normal;
+
+  @include transition-function(color);
+
+  &:hover,
+  &:focus {
+    color: getColor('accent');
+  }
+}
+
+.adress__link--colored {
+  color: rgba(getColor('primary'), 0.6);
+}

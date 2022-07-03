@@ -1,0 +1,19 @@
+$section-paddings: (
+  'padding-mob': 60px,
+  'padding-desk': 94px,
+);
+
+$footer-padding: 60px;
+
+$gap-size: 30px;
+
+// Animation properties
+$duration: 250ms;
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+// Breakpoints
+$breakpoints: (
+  'mobile': 480px,
+  'tablet': 768px,
+  'desktop': 1200px,
+);

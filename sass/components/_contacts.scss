@@ -1,0 +1,44 @@
+.contacts {
+  @include font-style(500, 12px, 0.02em, 1.17);
+
+  @include respond-to('desktop') {
+    @include font-style(null, 14px, null, 1.14);
+  }
+}
+
+.contacts__item {
+  @include respond-to('desktop') {
+    padding: 32px 0;
+  }
+}
+
+.contacts__item:not(:last-child) {
+  @include respond-to('tablet') {
+    margin: 0 0 10px 0;
+  }
+
+  @include respond-to('desktop') {
+    margin: 0 30px 0 0;
+    padding: 32px 0;
+  }
+}
+
+.contacts__link {
+  padding-top: 0px;
+  padding-bottom: 0px;
+
+  color: inherit;
+
+  @include transition-function(color);
+
+  &:hover,
+  &:focus {
+    color: getColor('accent');
+  }
+}
+
+.contacts__icon {
+  vertical-align: middle;
+  fill: currentColor;
+  margin-right: 10px;
+}

@@ -1,0 +1,28 @@
+.advantages__title {
+  margin-bottom: 50px;
+}
+
+.advantages__list {
+  @include respond-to('tablet') {
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc(#{$gap-size} / -2);
+  }
+}
+
+.advantages__item {
+  margin-bottom: 30px;
+
+  @include respond-to('mobile') {
+    flex-basis: 100%;
+  }
+
+  @include respond-to('tablet') {
+    flex-basis: calc((100% - (2 * #{$gap-size})) / 2);
+    margin: calc(#{$gap-size} / 2);
+  }
+
+  @include respond-to('desktop') {
+    flex-basis: calc((100% - (4 * #{$gap-size})) / 4);
+  }
+}

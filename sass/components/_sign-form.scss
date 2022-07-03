@@ -1,0 +1,45 @@
+.sign-form {
+  @include respond-to('desktop') {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.sign-form__email {
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 15px 16px;
+  margin: 0 0 20px;
+
+  background: transparent;
+  border: 1px solid rgba(getColor('primary'), 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(getColor('dark'), 0.15));
+  border-radius: 4px;
+  color: rgba(getColor('primary'), 0.6);
+
+  @include transition-function(transition);
+
+  &::placeholder {
+    @include font-style(null, null, 0.03em, 1.25);
+
+    color: rgba(getColor('primary'), 0.6);
+  }
+
+  &:focus,
+  &:hover {
+    outline: transparent;
+    border-color: getColor('accent');
+  }
+
+  @include respond-to('tablet') {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include respond-to('desktop') {
+    width: 358px;
+    margin: 0 12px 0 0;
+  }
+}

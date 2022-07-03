@@ -1,0 +1,135 @@
+.mobile-menu__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  z-index: 5;
+  transform: translateX(100%);
+
+  background-color: #ffffff;
+  overflow-y: auto;
+
+  @include transition-function(transform);
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  @include respond-to('tablet') {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.mobile-menu__item {
+  @include font-style(500, 40px, 0.02em, 1.13);
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.mobile-menu__link {
+  color: getColor('secondary');
+
+  @include transition-function(color);
+
+  &:hover,
+  &:focus {
+    color: getColor('accent');
+  }
+
+  &--current {
+    color: getColor('accent');
+  }
+}
+
+.mobile-menu__close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-menu__icon {
+  display: block;
+  fill: currentColor;
+
+  @include transition-function(color);
+
+  .mobile-menu__close-btn:hover &,
+  .mobile-menu__close-btn:focus & {
+    color: getColor('accent');
+  }
+}
+
+.mobile-contacts__item {
+  margin-bottom: 64px;
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.mobile-contacts__link {
+  @include font-style(null, 24px, null, 1.18);
+  color: inherit;
+
+  @include transition-function(color);
+
+  &--tel {
+    @include font-style(null, calc(16px + 4vw), null, null);
+    color: getColor('accent');
+
+    @include respond-to('mobile') {
+      @include font-style(null, 34px, null, null);
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: getColor('accent');
+  }
+}
+
+.mobile-socials__list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px 0;
+  margin: 0 -10px;
+}
+
+.mobile-socials__item {
+  &:not(:last-child) {
+    border-right: 1px solid rgba(getColor('secondary'), 0.2);
+  }
+}
+
+.mobile-socials__link {
+  @include font-style(500, 18px, 0.02em, 1.22);
+  color: getColor('accent');
+
+  @include transition-function(color);
+
+  padding-right: 10px;
+  padding-left: 10px;
+
+  &:hover,
+  &:focus {
+    color: getColor('accent-hover');
+  }
+}

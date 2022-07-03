@@ -1,0 +1,38 @@
+.button {
+  padding: 10px 32px;
+  min-width: 200px;
+  height: 50px;
+  margin: 0;
+
+  @include font-style(700, 16px, 0.06em, 1.88);
+  font-family: inherit;
+  text-align: center;
+
+  cursor: pointer;
+  color: getColor('secondary');
+  background-color: getColor('secondary-background');
+  border-radius: 4px;
+  border: transparent;
+
+  @include transition-function(background-color, color, box-shadow);
+
+  &:hover,
+  &:focus {
+    background-color: getColor('accent-hover');
+  }
+
+  &--append {
+    margin-left: 10px;
+  }
+
+  &--primary {
+    box-shadow: 0px 4px 4px rgba(getColor('dark'), 0.15);
+    color: getColor('primary');
+    background-color: getColor('accent');
+  }
+}
+
+.button-icon {
+  vertical-align: middle;
+  fill: currentColor;
+}

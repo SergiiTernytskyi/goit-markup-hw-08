@@ -1,0 +1,44 @@
+.about {
+  display: none;
+
+  @include respond-to('desktop') {
+    display: block;
+    padding-bottom: map-get($section-paddings, 'padding-desk');
+  }
+}
+
+.about__title {
+  margin-bottom: 50px;
+}
+
+.about__list {
+  display: flex;
+}
+
+.about__item {
+  position: relative;
+  flex-basis: calc((100% - 2 * #{$gap-size}) / 3);
+
+  &:not(:last-child) {
+    margin-right: $gap-size;
+  }
+}
+
+.about__text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 370px;
+  height: 70px;
+
+  @include font-style(700, 14px, 0.03em, 1.14);
+
+  text-transform: uppercase;
+  text-align: center;
+  color: getColor('primary');
+  background-color: rgba(getColor('secondary-overlay'), 0.8);
+}

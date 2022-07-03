@@ -1,0 +1,18 @@
+.logo {
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  font-family: $secondary-font;
+  @include font-style(700, 26px, 0.03em, 1.19);
+  color: getColor('secondary');
+
+  &__text--accent {
+    color: getColor('accent');
+  }
+
+  @include respond-to('desktop') {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}

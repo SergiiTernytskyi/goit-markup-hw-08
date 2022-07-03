@@ -1,0 +1,28 @@
+.member-card {
+  width: 100%;
+  text-align: center;
+}
+
+.member-card__meta {
+  padding-top: 30px;
+  padding-bottom: 24px;
+
+  background-color: getColor('primary');
+  border-radius: 0px 0px 4px 4px;
+
+  @include respond-to('desktop') {
+    padding-bottom: 30px;
+  }
+}
+
+.member-card__name {
+  margin-bottom: 10px;
+
+  @include font-style(500, 16px, 0.03em, 1.19);
+  color: getColor('secondary');
+}
+
+.member-card__text {
+  margin-bottom: 16px;
+  @include font-style(null, null, null, 1.19);
+}
