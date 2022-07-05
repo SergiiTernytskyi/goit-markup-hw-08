@@ -26,7 +26,8 @@
       url(../images/hero-img-1440.jpg);
   }
 
-  @include respond-to('tablet') {
+  @media screen and (min-width: 481px) {
+    width: 100%;
     max-width: 768px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/hero-img-768.jpg);
@@ -44,10 +45,11 @@
     }
   }
 
-  @include respond-to('desktop') {
+  @media screen and (min-width: 769px) {
     padding-top: 200px;
     padding-bottom: 200px;
     height: 600px;
+    width: 100%;
     max-width: 1600px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/hero-img-1600.jpg);

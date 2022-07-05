@@ -7,9 +7,6 @@
 }
 
 .contacts__item {
-  @include respond-to('desktop') {
-    padding: 32px 0;
-  }
 }
 
 .contacts__item:not(:last-child) {
@@ -19,13 +16,11 @@
 
   @include respond-to('desktop') {
     margin: 0 30px 0 0;
-    padding: 32px 0;
   }
 }
 
 .contacts__link {
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding: 0px;
 
   color: inherit;
 
@@ -34,6 +29,22 @@
   &:hover,
   &:focus {
     color: getColor('accent');
+  }
+
+  @include respond-to('desktop') {
+    padding: 32px 0;
+  }
+}
+
+.contacts__link--email {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding: 20px 0 0;
+  }
+}
+
+.contacts__link--tel {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding: 0 0 20px 0;
   }
 }
 

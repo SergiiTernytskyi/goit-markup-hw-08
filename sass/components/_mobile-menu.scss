@@ -7,14 +7,18 @@
   padding: 48px 40px;
   z-index: 5;
   transform: translateX(100%);
+  visibility: hidden;
+  opacity: 0;
 
   background-color: #ffffff;
   overflow-y: auto;
 
-  @include transition-function(transform);
+  @include transition-function(transform, visibility, opacity);
 
   &.is-open {
     transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
   }
 
   @include respond-to('tablet') {

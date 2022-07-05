@@ -21,10 +21,6 @@
     background-color: getColor('accent-hover');
   }
 
-  &--append {
-    margin-left: 10px;
-  }
-
   &--primary {
     box-shadow: 0px 4px 4px rgba(getColor('dark'), 0.15);
     color: getColor('primary');
@@ -35,4 +31,8 @@
 .button-icon {
   vertical-align: middle;
   fill: currentColor;
+
+  &--append {
+    margin-left: 10px;
+  }
 }

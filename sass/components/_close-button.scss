@@ -11,10 +11,13 @@
   border-radius: 50%;
   fill: getColor('tertiary');
 
-  @include transition-function(color);
+  @include transition-function(color, border-color);
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: getColor('accent');
+    border-color: getColor('accent');
+    outline: transparent;
   }
 
   &__icon {

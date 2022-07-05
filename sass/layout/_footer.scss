@@ -16,10 +16,17 @@
 }
 
 .footer__inform {
+  margin-bottom: 60px;
+
   @include respond-to('tablet') {
     display: flex;
     justify-content: space-around;
     align-items: baseline;
+  }
+
+  @include respond-to('desktop') {
+    margin-right: 94px;
+    margin-bottom: 0;
   }
 }
 
@@ -29,11 +36,12 @@
 
   @include respond-to('tablet') {
     width: 232px;
+    margin: 0;
   }
 
   @include respond-to('desktop') {
     width: 232px;
-    margin: 0 74px 0 0;
+    margin: 0 70px 0 0;
   }
 }
 
@@ -47,11 +55,8 @@
 }
 
 .footer__socials-wrapper {
-  margin-bottom: 60px;
-
   @include respond-to('desktop') {
     margin-bottom: 0;
-    margin-right: 94px;
   }
 }
 
